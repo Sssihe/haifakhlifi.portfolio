@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-primary: #7b5556;
+  --color-primary-dim: #6e494a;
+  --color-primary-container: #f7c5c5;
+  --color-on-primary: #fff7f6;
+  --color-on-primary-container: #613e3f;
+  
+  --color-secondary: #5a5e73;
+  --color-secondary-container: #dde1fa;
+  --color-on-secondary: #faf8ff;
+  --color-on-secondary-container: #4c5165;
+
+  --color-tertiary: #685e4e;
+  --color-tertiary-container: #feefda;
+  --color-on-tertiary: #fff8f2;
+  --color-on-tertiary-container: #635949;
+
+  --color-background: #fcf8f7;
+  --color-on-background: #333232;
+  
+  --color-surface: #fcf8f7;
+  --color-on-surface: #333232;
+  --color-on-surface-variant: #605f5e;
+  
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f7f3f2;
+  --color-surface-container: #f1edec;
+  --color-surface-container-high: #ebe7e6;
+  --color-surface-container-highest: #e5e2e1;
+
+  --color-outline: #7c7a7a;
+  --color-outline-variant: #b4b1b0;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-nav {
+  @apply backdrop-blur-xl bg-background/80 sticky top-0 z-50;
+}
+
+.editorial-shadow {
+  box-shadow: 0 20px 50px rgba(123, 85, 86, 0.05);
+}
+
+.editorial-shadow:hover {
+  box-shadow: 0 30px 60px rgba(123, 85, 86, 0.08);
+}
